@@ -1,0 +1,122 @@
+## Author Details
+
+**Name:** Harshil Patel
+**Project:** Internship Task from Elevate Labs
+
+### Suggestions
+
+* Always test firewall rules after applying them to ensure they work correctly
+* Avoid blocking SSH (port 22) while working on a remote system
+* Keep firewall rules minimal and only allow necessary ports
+* Regularly review and clean unused or duplicate rules
+* Take proper screenshots of each step for documentation and submission
+
+
+UFW Firewall Commands and Rules
+
+This document lists the basic UFW (Uncomplicated Firewall) commands and rules used in this project.
+
+------------------------------------------------------------
+
+(1) Checking Firewall Rules
+
+Command:
+sudo ufw status
+
+Description:
+Displays all currently applied firewall rules.
+
+Alternative Command:
+sudo ufw status numbered
+
+Description:
+Displays firewall rules in a numbered list format, which is useful for deleting specific rules.
+
+------------------------------------------------------------
+
+(2) Adding Firewall Rules
+
+Command Format:
+sudo ufw [allow | deny] [port | port-range | service]
+
+Description:
+Used to allow or block traffic based on port number, port range, or service name.
+
+Examples:
+
+Allow SSH (port 22):
+sudo ufw allow 22
+
+Block Telnet (port 23):
+sudo ufw deny 23
+
+Allow HTTP:
+sudo ufw allow http
+
+Allow HTTPS:
+sudo ufw allow 443
+
+Allow port range:
+sudo ufw allow 1000:2000/tcp
+
+------------------------------------------------------------
+
+(3) Removing Firewall Rules
+
+Step 1: List rules with numbers
+sudo ufw status numbered
+
+Step 2: Delete rule by number
+sudo ufw delete <rule_number>
+
+Example:
+sudo ufw delete 2
+
+Alternative:
+Delete rule by specifying it
+sudo ufw delete allow 22
+sudo ufw delete deny 23
+
+------------------------------------------------------------
+
+(4) Enabling Firewall
+
+Command:
+sudo ufw enable
+
+Description:
+Activates the firewall and applies all rules.
+
+------------------------------------------------------------
+
+(5) Disabling Firewall
+
+Command:
+sudo ufw disable
+
+Description:
+Turns off the firewall.
+
+------------------------------------------------------------
+
+(6) Resetting Firewall
+
+Command:
+sudo ufw reset
+
+Description:
+Removes all rules and resets firewall to default settings.
+
+------------------------------------------------------------
+
+(7) Default Policies
+
+Deny all incoming traffic:
+sudo ufw default deny incoming
+
+Allow all outgoing traffic:
+sudo ufw default allow outgoing
+
+------------------------------------------------------------
+
+End of Document

@@ -1,0 +1,135 @@
+## Author Details
+
+Name: Harshil Patel
+Project: Internship Task from Elevate Labs
+
+### Suggestions
+
+* Always test firewall rules after applying them to ensure they work correctly
+* Avoid blocking SSH (port 22) while working on a remote system
+* Keep firewall rules minimal and only allow necessary ports
+* Regularly review and clean unused or duplicate rules
+* Take proper screenshots of each step for documentation and submission
+
+
+
+# 🛡️ Windows Firewall Configuration (GUI Method)
+
+## Objective
+
+To configure and test firewall rules using Windows Defender Firewall and understand how traffic is allowed or blocked.
+
+---
+
+## Tool Used
+
+* Windows Defender Firewall with Advanced Security
+
+---
+
+## ⚙️ Step-by-Step Procedure
+
+### (1) Open Firewall Settings
+
+* Press **Win + R**
+* Type: `wf.msc`
+* Press Enter
+
+Description: Opens Windows Firewall with Advanced Security panel.
+
+---
+
+### (2) View Existing Rules
+
+* Click on **Inbound Rules** (left panel)
+* Click on **Outbound Rules** (left panel)
+
+Description: Displays all active firewall rules.
+
+---
+
+### (3) Block a Port (Example: Port 23 - Telnet)
+
+Steps:
+
+1. Click **Inbound Rules**
+2. Click **New Rule** (right panel)
+3. Select **Port** → Next
+4. Select **TCP**
+5. Enter **23** → Next
+6. Select **Block the connection** → Next
+7. Apply to all profiles (Domain, Private, Public)
+8. Name it: `Block Telnet Port 23`
+9. Click Finish
+
+---
+
+### (4) Allow a Port (Example: Port 22 - SSH)
+
+Steps:
+
+1. Click **Inbound Rules**
+2. Click **New Rule**
+3. Select **Port**
+4. Choose **TCP**
+5. Enter **22**
+6. Select **Allow the connection**
+7. Apply all profiles
+8. Name it: `Allow SSH Port 22`
+9. Click Finish
+
+---
+
+### (5) Allow HTTP and HTTPS
+
+Repeat steps above with:
+
+* Port **80** (HTTP)
+* Port **443** (HTTPS)
+
+---
+
+### (6) Block a Specific IP Address
+
+Steps:
+
+1. Create new rule
+2. Choose **Custom**
+3. Select **All Programs**
+4. Protocol: Any
+5. Scope → Add remote IP (e.g., 192.168.1.200)
+6. Action → Block connection
+7. Name rule
+
+---
+
+### (7) Remove Firewall Rule
+
+Steps:
+
+1. Go to Inbound Rules
+2. Find the rule
+3. Right-click → Delete
+
+---
+
+### (8) Enable/Disable Firewall
+
+Steps:
+
+* Open Control Panel → Windows Defender Firewall
+* Click Turn Windows Defender Firewall ON or OFF
+
+---
+
+##  Testing
+
+* Try accessing blocked port using telnet:
+
+  ```
+  telnet localhost 23
+  ```
+* Expected result: Connection blocked
+
+---
+
