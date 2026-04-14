@@ -1,12 +1,12 @@
-========================================
+=========================================
 👤 AUTHOR DETAILS
-========================================
+=========================================
 Name: Harshil Patel
 
-========================================
+=========================================
 🔐 FIREWALL CONFIGURATION PROJECT
 (Linux UFW + Windows Firewall)
-========================================
+=========================================
 
 📘 OVERVIEW:
 This project demonstrates firewall configuration and network traffic filtering using:
@@ -15,27 +15,27 @@ This project demonstrates firewall configuration and network traffic filtering u
 
 It includes creating, managing, testing, and removing firewall rules to improve system security.
 
-========================================
+=========================================
 🧰 TOOLS USED:
-========================================
+=========================================
 - Linux (Ubuntu/Kali)
 - UFW Firewall (Linux)
 - Windows Defender Firewall
 - Command Line Interface (CLI)
 - Windows Firewall Advanced Security (wf.msc)
 
-========================================
+=========================================
 🎯 OBJECTIVES:
-========================================
+=========================================
 - Understand firewall basics
 - Configure inbound and outbound rules
 - Allow and block ports and IP addresses
 - Test firewall behavior
 - Learn network security fundamentals
 
-========================================
+=========================================
 🐧 LINUX FIREWALL (UFW COMMANDS)
-========================================
+=========================================
 
 1. Enable Firewall:
 sudo ufw enable
@@ -73,9 +73,9 @@ sudo ufw delete <rule_number>
 11. Reset Firewall:
 sudo ufw reset
 
-========================================
+=========================================
 🪟 WINDOWS FIREWALL (STEPS)
-========================================
+=========================================
 
 1. Open Firewall:
 Press Win + R → type wf.msc
@@ -98,29 +98,29 @@ Inbound Rules / Outbound Rules
 5. Delete Rule:
 Right click rule → Delete
 
-========================================
+=========================================
 🧪 TESTING:
-========================================
+=========================================
 - Tested blocked port using telnet:
   telnet localhost 23
 - Verified rules using:
   sudo ufw status
 
-========================================
+=========================================
 📊 OUTCOME:
-========================================
+=========================================
 - Learned firewall configuration
 - Understood packet filtering
 - Gained Linux + Windows firewall experience
 - Improved cybersecurity fundamentals
 
-========================================
+=========================================
 📌 PROJECT TYPE:
-========================================
+=========================================
 Cybersecurity Internship Task
 Firewall Configuration & Network Security Basics
 
-========================================
+=========================================
 🚀 NOTE:
-========================================
+=========================================
 This project is for educational purposes only.
