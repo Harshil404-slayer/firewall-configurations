@@ -45,8 +45,7 @@ This project demonstrates basic firewall configuration and management using **UF
 ## 📁 Contents
 - Linux UFW commands documentation
 - Windows Firewall step-by-step configuration
-- Screenshots (if added)
-- Notes and interview Q&A
+- Screenshots
 
 ---
 
